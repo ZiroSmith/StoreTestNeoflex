@@ -1,364 +1,75 @@
 import colors from '../colors';
 
 export const fonts = {
-  fontFamilyAntelive: 'Antelive, Arial, sans-serif',
-  fontFamilyOnest: 'Onest, Arial, sans-serif',
+  fontFamilyMontserratSemiBold: 'MontserratSemiBold, Arial, sans-serif',
+  fontFamilyMontserratBold: 'MontserratBold, Arial, sans-serif',
+  fontFamilyMontserratRegular: 'MontserratRegular, Arial, sans-serif',
+  fontFamilyMontserratMedium: 'MontserratMedium, Arial, sans-serif',
 };
 
-export const header24Mobile = `
-font-size: 24px;
-font-weight: 700;
-font-style: normal;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyAntelive};
-`;
-
-export const header18Mobile = `
-font-size: 18px;
-font-weight: 700;
-font-style: normal;
-line-height: 130%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyAntelive};
-`;
-
-export const customHeaderMedium = `
-font-size: 40px;
-font-weight: 500;
-font-style: normal;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const customHeaderBold = `
-font-family: Onest;
-font-size: 40px;
-font-weight: 700;
-font-style: normal;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const customHeader32 = `
-font-family: Onest;
-font-size: 32px;
-font-weight: 500;
-font-style: normal;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const customHeader20 = `
-font-family: Onest;
-font-size: 20px;
-font-weight: 700;
-font-style: normal;
-line-height: 130%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const reg24auto = `
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const reg24150 = `
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const bold24150 = `
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const reg20150 = `
+export const titleText = `
 font-size: 20px;
 font-style: normal;
-font-weight: 400;
 line-height: normal;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
+color: ${colors.grey};
+font-family: ${fonts.fontFamilyMontserratSemiBold};
 `;
 
-export const bold20150 = `
+export const titleCard = `
+font-size: 17px;
+font-style: normal;
+line-height: normal;
+color: ${colors.black};
+font-family: ${fonts.fontFamilyMontserratSemiBold};
+`;
+
+export const priceCard = `
+font-size: 17px;
+font-style: normal;
+line-height: normal;
+color: ${colors.yellow};
+font-family: ${fonts.fontFamilyMontserratSemiBold};
+`;
+
+export const oldPriceCard = `
+font-size: 13px;
+font-style: normal;
+line-height: normal;
+color: ${colors.lightYellow};
+font-family: ${fonts.fontFamilyMontserratSemiBold};
+`;
+
+
+export const gradeCard = `
 font-size: 20px;
 font-style: normal;
-font-weight: 700;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const reg18150 = `
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
 line-height: normal;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
+color: ${colors.grey};
+font-family: ${fonts.fontFamilyMontserratSemiBold};
 `;
 
-export const bold18150 = `
-font-size: 18px;
+export const nawLink = `
+font-size: 17px;
 font-style: normal;
-font-weight: 700;
 line-height: normal;
 color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
+font-family: ${fonts.fontFamilyMontserratRegular};
 `;
 
-export const reg18auto = `
-font-size: 18px;
+export const langBtnOff = `
+font-size: 15px;
 font-style: normal;
-font-weight: 400;
 line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const bold18auto = `
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const reg16150 = `
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const quotation32 = `
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const quotationRed = `
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%;
-color: ${colors.red};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const quotation16 = `
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const inputRed = `
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-color: ${colors.red};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const input18 = `
-font-size: 18px;
-font-style: normal;
 font-weight: 500;
-line-height: 150%;
 color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
+font-family: ${fonts.fontFamilyMontserratMedium};
 `;
 
-export const input16 = `
-font-size: 16px;
+export const langBtnOn = `
+font-size: 15px;
 font-style: normal;
-font-weight: 500;
 line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const buttonBold24 = `
-font-size: 24px;
-font-style: normal;
 font-weight: 700;
-line-height: 130%;
-text-transform: uppercase;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const button24 = `
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-text-transform: uppercase;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const buttonBold20 = `
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: uppercase;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const button18 = `
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const button16 = `
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const pagination = `
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-text-transform: uppercase;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const paginationActive = `
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-text-transform: uppercase;
-text-decoration-line: underline;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const linkBold24 = `
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-decoration-line: underline;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const linkReg24 = `
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration-line: underline;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const linkReg18 = `
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-text-decoration-line: underline;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const linkReg16 = `
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-text-decoration-line: underline;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const navMedium = `
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const breadCrumbs18 = `
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const breadCrumbs16 = `
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const navReg = `
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
-`;
-
-export const navBold = `
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-color: ${colors.black};
-font-family: ${fonts.fontFamilyOnest};
+color: ${colors.yellow};
+font-family: ${fonts.fontFamilyMontserratBold};
 `;

@@ -1,15 +1,33 @@
+import Card from "../../Shared/Components/Card/card";
+import { CARDS_INFO, CARDS_WIRELESS_INFO } from "./const";
+
 import {
-  TSSection, TSTitle, TSContainer,
-} from './styled';
+  HomeStore,
+  HomeStoreContainer,
+  HomeStoreTitle,
+  CardContainer,
+  CardWirelessContainer,
+} from "./styled";
 
-
-function homeblock() {
+function HomePage() {
+  const cards = CARDS_INFO?.map((card) => (
+    <Card key={`IC${card.id}`} card={card} />
+  ));
+  const cardsWireless = CARDS_WIRELESS_INFO?.map((card) => (
+    <Card key={`IC${card.id}`} card={card} />
+  ));
   return (
-    <TSSection>
-      <TSTitle>Карточки</TSTitle>
-      <TSContainer></TSContainer>
-    </TSSection>
+    <HomeStore>
+      <HomeStoreContainer>
+        <HomeStoreTitle>Наушники</HomeStoreTitle>
+        <CardContainer>{cards}</CardContainer>
+      </HomeStoreContainer>
+      <HomeStoreContainer>
+        <HomeStoreTitle>Беспроводные наушники</HomeStoreTitle>
+        <CardWirelessContainer>{cardsWireless}</CardWirelessContainer>
+      </HomeStoreContainer>
+    </HomeStore>
   );
 }
 
-export default homeblock;
+export default HomePage;

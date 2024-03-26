@@ -5,6 +5,7 @@ const MainWrapper = styled.div`
   background-color: #EAEAEA;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   margin: 0 auto;
 `;
 export default MainWrapper;
