@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from '../../Shared/Constants/colors';
-import { fonts } from '../../Shared/Constants/typography';
 import Error404Img from '../../Assets/images/error404.svg';
 
 export const ErrorPageWrapper = styled.div`
@@ -27,13 +26,11 @@ export const ErrorText = styled.p`
   font-weight: 700;
   line-height: normal;
   color: ${colors.black};
-  font-family: ${fonts.fontFamilyAntelive};
   text-align: center;
 `;
 
 export const ErrorLink = styled(NavLink)`
   color: ${colors.grey};
-  font-family: ${fonts.fontFamilyAntelive};
   text-decoration: none;
   text-align: center;
   font-size: 32px;

@@ -1,10 +1,9 @@
-import HomeBlock from '../../Widgets/HomeBlock/homeBlock';
-
+import StoreBlock from '../../Widgets/StoreСatalog/storeCatalog';
 
 function HomePage() {
   return (
     <main>
-      <HomeBlock />
+      <StoreBlock />
     </main>
   );
 }

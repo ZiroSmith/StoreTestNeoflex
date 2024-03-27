@@ -2,14 +2,14 @@ import Card from "../../Shared/Components/Card/card";
 import { CARDS_INFO, CARDS_WIRELESS_INFO } from "./const";
 
 import {
-  HomeStore,
-  HomeStoreContainer,
-  HomeStoreTitle,
+  Catalog,
+  CatalogStoreContainer,
+  CatalogStoreTitle,
   CardContainer,
   CardWirelessContainer,
 } from "./styled";
 
-function HomePage() {
+function StoreCatalog() {
   const cards = CARDS_INFO?.map((card) => (
     <Card key={`IC${card.id}`} card={card} />
   ));
@@ -17,17 +17,17 @@ function HomePage() {
     <Card key={`IC${card.id}`} card={card} />
   ));
   return (
-    <HomeStore>
-      <HomeStoreContainer>
-        <HomeStoreTitle>Наушники</HomeStoreTitle>
+    <Catalog>
+      <CatalogStoreContainer>
+        <CatalogStoreTitle>Наушники</CatalogStoreTitle>
         <CardContainer>{cards}</CardContainer>
-      </HomeStoreContainer>
-      <HomeStoreContainer>
-        <HomeStoreTitle>Беспроводные наушники</HomeStoreTitle>
+      </CatalogStoreContainer>
+      <CatalogStoreContainer>
+        <CatalogStoreTitle>Беспроводные наушники</CatalogStoreTitle>
         <CardWirelessContainer>{cardsWireless}</CardWirelessContainer>
-      </HomeStoreContainer>
-    </HomeStore>
+      </CatalogStoreContainer>
+    </Catalog>
   );
 }
 
-export default HomePage;
+export default StoreCatalog;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { titleText } from "../../Shared/Constants/typography";
 
-export const HomeStore = styled.section`
+export const Catalog = styled.section`
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -10,13 +10,13 @@ export const HomeStore = styled.section`
   gap: 28px;
 `;
 
-export const HomeStoreContainer = styled.div`
+export const CatalogStoreContainer = styled.div`
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
 `;
 
-export const HomeStoreTitle = styled.h2`
+export const CatalogStoreTitle = styled.h2`
   ${titleText}
 `;
 
