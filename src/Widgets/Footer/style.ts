@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import {
@@ -17,12 +18,28 @@ export const FooterWrapper = styled.footer`
   border-top-right-radius: 30px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    height: 350px;
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
+export const Link = styled(NavLink)`
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Footerlogo = styled.img`
   width: 85px;
   height: 23px;
   margin: 36px 0 0 28px;
+
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 `;
 
 export const FooterInfo = styled.div`
@@ -31,6 +48,11 @@ export const FooterInfo = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin: 34px auto 0;
+  }
 `;
 
 export const FooterNaw = styled.div`
@@ -38,6 +60,10 @@ export const FooterNaw = styled.div`
   flex-direction: column;
   gap: 10px;
   margin: 4px 0 0 58px;
+
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 `;
 
 export const FooterNawLink = styled.a`
@@ -51,6 +77,12 @@ export const FooterNawLink = styled.a`
 
 export const FooterLang = styled.div`
   margin: 2px 2px 0 0;
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0;
+  }
 `;
 
 export const Сonditions = styled.a`
@@ -60,12 +92,21 @@ export const Сonditions = styled.a`
   &:hover {
     opacity: 0.5;
   }
+
+  @media (max-width: 600px) {
+    margin: 20px auto;
+  }
 `;
 
 export const FooterLangContainer = styled.div`
   display: flex;
   justify-content: right;
   margin-top: 36px;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+    margin: 0 auto;
+  }
 `;
 export const LangIcon = styled.img`
   margin-right: 16px;
@@ -78,6 +119,10 @@ export const LangBtn = styled.div`
   transition: 0.3s all;
   &:hover {
     opacity: 0.5;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
   }
 `;
 
@@ -95,6 +140,10 @@ export const FooterLinkContainer = styled.div`
   display: flex;
   gap: 18px;
   margin: 30px 26px 0 0;
+
+  @media (max-width: 600px) {
+    margin: 30px auto 0;
+  }
 `;
 
 export const FooterLink = styled.a`

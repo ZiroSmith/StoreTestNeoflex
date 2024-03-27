@@ -1,28 +1,31 @@
-//import { page } from '../../Shared/Constants/navigation';
-import HeaderLogo from '../../Assets/images/logo.png';
+import { page } from "../../Shared/Constants/navigation";
+import HeaderLogo from "../../Assets/images/logo.png";
 
 import {
   HeaderWrapper,
   Headerlogo,
+  HeaderLink,
   HeaderContainer,
   LikeButton,
   LikeButtonImg,
   LikeButtonQuantity,
   BasketButton,
   BasketButtonImg,
-  BasketButtonQuantity
+  BasketButtonQuantity,
 } from "./style";
 
 function Header() {
   return (
     <HeaderWrapper>
-      <Headerlogo src={HeaderLogo} alt="Logo"/>
+      <HeaderLink to={page.mainPage}>
+        <Headerlogo src={HeaderLogo} alt="Logo" />
+      </HeaderLink>
       <HeaderContainer>
-        <LikeButton>
+        <LikeButton to={page.basketPage}>
           <LikeButtonImg />
           <LikeButtonQuantity>2</LikeButtonQuantity>
         </LikeButton>
-        <BasketButton>
+        <BasketButton to={page.basketPage}>
           <BasketButtonImg />
           <BasketButtonQuantity>1</BasketButtonQuantity>
         </BasketButton>

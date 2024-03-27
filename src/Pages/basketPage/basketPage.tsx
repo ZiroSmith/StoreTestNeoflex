@@ -1,9 +1,9 @@
-import StoreBasket from '../../Widgets/StoreBasket/storeBasket';
+import ShoppingBox from '../../Widgets/ShoppingBox/shoppingBox';
 
 function BasketPage() {
   return (
     <main>
-      <StoreBasket />
+      <ShoppingBox />
     </main>
   );
 }

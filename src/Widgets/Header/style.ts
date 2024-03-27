@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from "styled-components";
 import LikeImg from "../../Assets/images/icon_like.svg";
 import BasketImg from "../../Assets/images/icon_buy.svg";
@@ -12,6 +13,9 @@ export const HeaderWrapper = styled.header`
   align-items: center;
 `;
 
+export const HeaderLink = styled(NavLink)`
+`;
+
 export const Headerlogo = styled.img`
   width: 85px;
   height: 23px;
@@ -22,7 +26,7 @@ export const HeaderContainer = styled.div`
   display: flex;
 `;
 
-export const LikeButton = styled.button`
+export const LikeButton = styled(NavLink)`
   position: relative;
   width: 60px;
   height: 60px;
@@ -56,7 +60,7 @@ export const LikeButtonQuantity = styled.div`
   border-radius: 50%;
 `;
 
-export const BasketButton = styled.button`
+export const BasketButton = styled(NavLink)`
   position: relative;
   width: 60px;
   height: 60px;

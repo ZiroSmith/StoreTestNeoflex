@@ -26,8 +26,10 @@ export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 `;
 
 export const CardWirelessContainer = styled(CardContainer)`
   margin-top: 24px;
+  justify-content: center;
 `;

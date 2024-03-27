@@ -1,4 +1,4 @@
-import StoreBlock from '../../Widgets/StoreСatalog/storeCatalog';
+import StoreBlock from '../../Widgets/Сatalog/сatalog';
 
 function HomePage() {
   return (

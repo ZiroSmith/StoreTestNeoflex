@@ -1,3 +1,4 @@
+import { page } from "../../Shared/Constants/navigation";
 import FooterLogo from "../../Assets/images/logo.png";
 import IconLang from "../../Assets/images/icon_lang.png";
 import IconVK from "../../Assets/images/icon_VK.svg";
@@ -6,6 +7,7 @@ import IconWhatsApp from "../../Assets/images/icon_Whatsapp.svg";
 
 import {
   FooterWrapper,
+  Link,
   Footerlogo,
   FooterInfo,
   FooterNaw,
@@ -24,12 +26,20 @@ import {
 function Footer() {
   return (
     <FooterWrapper>
-      <Footerlogo src={FooterLogo} alt="Logo" />
+      <Link to={page.mainPage}>
+        <Footerlogo src={FooterLogo} alt="Logo" />
+      </Link>
       <FooterInfo>
         <FooterNaw>
-          <FooterNawLink>Избранное</FooterNawLink>
-          <FooterNawLink>Корзина</FooterNawLink>
-          <FooterNawLink>Контакты</FooterNawLink>
+          <Link to={page.basketPage}>
+            <FooterNawLink>Избранное</FooterNawLink>
+          </Link>
+          <Link to={page.basketPage}>
+            <FooterNawLink>Корзина</FooterNawLink>
+          </Link>
+          <Link to={page.mainPage}>
+            <FooterNawLink>Контакты</FooterNawLink>
+          </Link>
         </FooterNaw>
         <FooterLang>
           <Сonditions>Условия сервиса</Сonditions>

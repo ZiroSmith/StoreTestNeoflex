@@ -1,14 +1,12 @@
 interface CardProps {
   card?: Card;
-  id?: number;
+  color?: string;
 }
 
 type Card = {
   id: number;
   name: string;
-  grade: string;
   price: string;
-  oldPrice: string;
   url: string;
   alt: string;
 };

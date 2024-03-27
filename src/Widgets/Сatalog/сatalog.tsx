@@ -16,6 +16,7 @@ function StoreCatalog() {
   const cardsWireless = CARDS_WIRELESS_INFO?.map((card) => (
     <Card key={`IC${card.id}`} card={card} />
   ));
+
   return (
     <Catalog>
       <CatalogStoreContainer>
