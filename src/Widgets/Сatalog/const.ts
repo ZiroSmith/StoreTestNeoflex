@@ -9,7 +9,7 @@ import imgWireless3 from "../../Assets/images/ImgWireless3.png";
 
 export const CARDS_INFO = [
   {
-    id: 1,
+    id: 0,
     name: "Apple BYZ S8521",
     grade: "4.7",
     price: "2927",
@@ -18,7 +18,7 @@ export const CARDS_INFO = [
     alt: "Наушники Apple BYZ S8521",
   },
   {
-    id: 2,
+    id: 1,
     name: "Apple EarPods",
     grade: "4.5",
     price: "2327",
@@ -27,7 +27,7 @@ export const CARDS_INFO = [
     alt: "Наушники Apple EarPods",
   },
   {
-    id: 3,
+    id: 2,
     name: "Apple EarPods",
     grade: "4.5",
     price: "2327",
@@ -36,7 +36,7 @@ export const CARDS_INFO = [
     alt: "Наушники Apple EarPods",
   },
   {
-    id: 4,
+    id: 3,
     name: "Apple BYZ S8521",
     grade: "4.7",
     price: "2927",
@@ -45,7 +45,7 @@ export const CARDS_INFO = [
     alt: "Наушники Apple BYZ S8521",
   },
   {
-    id: 5,
+    id: 4,
     name: "Apple EarPods",
     grade: "4.5",
     price: "2327",
@@ -54,7 +54,7 @@ export const CARDS_INFO = [
     alt: "Наушники Apple EarPods",
   },
   {
-    id: 6,
+    id: 5,
     name: "Apple EarPods",
     grade: "4.5",
     price: "2327",
