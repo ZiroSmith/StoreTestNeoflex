@@ -1,5 +1,4 @@
 import Card from "../../Shared/Components/BasketCard/card";
-import { CARDS_INFO } from "./const";
 
 import {
   Basket,
@@ -14,14 +13,19 @@ import {
 } from "./styled";
 
 function ShopinngBox() {
-  const cards = CARDS_INFO?.map((card) => (
-    <Card key={`IC${card.id}`} card={card} />
+  //почему ошибка?
+  const newData = JSON.parse(localStorage.getItem("cart"));
+
+  //почему ошибка?
+  const cardsnew = newData.map((card) => (
+    <Card key={card.id} card={card} />
   ));
+
   return (
     <Basket>
       <BasketStoreTitle>Корзина</BasketStoreTitle>
       <BasketStoreContainer>
-        <BasketCardContainer>{cards}</BasketCardContainer>
+        <BasketCardContainer>{cardsnew}</BasketCardContainer>
         <Payment>
           <PaymentPrice>
             <PaymentPriceText>ИТОГО</PaymentPriceText>

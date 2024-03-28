@@ -66,7 +66,7 @@ export const CARDS_INFO = [
 
 export const CARDS_WIRELESS_INFO = [
   {
-    id: 1,
+    id: 7,
     name: "Apple EarPods",
     grade: "4.7",
     price: "9527",
@@ -75,7 +75,7 @@ export const CARDS_WIRELESS_INFO = [
     alt: "Беспроводные наушники Apple EarPods",
   },
   {
-    id: 2,
+    id: 8,
     name: "GERLAX GH-04",
     grade: "4.7",
     price: "6527",
@@ -84,7 +84,7 @@ export const CARDS_WIRELESS_INFO = [
     alt: "Беспроводные наушники GERLAX GH-04",
   },
   {
-    id: 3,
+    id: 9,
     name: "BOROFONE BO4",
     grade: "4.7",
     price: "7527",
