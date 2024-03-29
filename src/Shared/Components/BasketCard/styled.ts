@@ -13,6 +13,8 @@ export const CardContainer = styled.article<CardProps>`
   display: flex;
   background-color: white;
   border-radius: 30px;
+  box-shadow: -4px -4px 14px 2px rgba(0, 0, 0, 0.1),
+    4px 4px 14px 2px rgba(0, 0, 0, 0.1);
 `;
 
 export const QuantityContainer = styled.div``;

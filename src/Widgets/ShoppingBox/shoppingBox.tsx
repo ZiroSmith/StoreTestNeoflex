@@ -1,3 +1,4 @@
+import { page } from "../../Shared/Constants/navigation";
 import Card from "../../Shared/Components/BasketCard/card";
 
 import {
@@ -10,6 +11,7 @@ import {
   PaymentPriceText,
   PaymentPriceSum,
   PaymentBtn,
+  ToHomeBtn,
 } from "./styled";
 
 function ShopinngBox() {
@@ -32,7 +34,9 @@ function ShopinngBox() {
             <PaymentPriceSum>₽ 2 927</PaymentPriceSum>
           </PaymentPrice>
           <PaymentBtn>Перейти к оформлению</PaymentBtn>
+          <ToHomeBtn to={page.mainPage}>Вернуться к каталогу</ToHomeBtn>
         </Payment>
+
       </BasketStoreContainer>
     </Basket>
   );

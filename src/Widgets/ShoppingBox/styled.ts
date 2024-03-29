@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import { titleText, titleCard } from "../../Shared/Constants/typography";
 
 export const Basket = styled.section`
@@ -40,6 +41,8 @@ export const Payment = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: -4px -4px 14px 2px rgba(0, 0, 0, 0.1),
+  4px 4px 14px 2px rgba(0, 0, 0, 0.1);
 `;
 export const PaymentPrice = styled.div`
   max-width: 311px;
@@ -70,6 +73,16 @@ export const PaymentBtn = styled.div`
   ${titleCard}
   color: white;
   cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const ToHomeBtn = styled(NavLink)`
+  ${titleText}
+  font-size: 15px;
+  margin: 0 auto -40px;
   transition: 0.3s all;
   &:hover {
     opacity: 0.5;

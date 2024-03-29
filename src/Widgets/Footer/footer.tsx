@@ -42,7 +42,7 @@ function Footer() {
           </Link>
         </FooterNaw>
         <FooterLang>
-          <Сonditions>Условия сервиса</Сonditions>
+          <Сonditions href="https://vc.ru/flood/612943-42-pravila-idealnogo-klientskogo-servisa-dlya-raznyh-biznes-nish-onlayn-i-oflayn-vzaimodeystviya-s-klientom">Условия сервиса</Сonditions>
           <FooterLangContainer>
             <LangIcon src={IconLang} alt="Icon Lang" />
             <LangBtnYellow>Рус</LangBtnYellow>
@@ -51,13 +51,13 @@ function Footer() {
         </FooterLang>
       </FooterInfo>
       <FooterLinkContainer>
-        <FooterLink>
+        <FooterLink href="https://vk.com/apple.inside">
           <FooterLinkImg src={IconVK} alt="VK" />
         </FooterLink>
-        <FooterLink>
+        <FooterLink href="https://t.me/apple">
           <FooterLinkImg src={IconTelegram} alt="Telegram" />
         </FooterLink>
-        <FooterLink>
+        <FooterLink href="tel:+71234567890">
           <FooterLinkImg src={IconWhatsApp} alt="WhatsApp" />
         </FooterLink>
       </FooterLinkContainer>

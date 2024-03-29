@@ -9,10 +9,11 @@ function Error404() {
     <ErrorPageWrapper>
       <ErrorTextContainer>
         <ErrorText>
-          Такой страницы нет. Сейчас проведем Вас на
+          Такой страницы пока не существует. Сейчас проведем Вас на
           <ErrorLink to={page.mainPage}> &nbsp;ГЛАВНУЮ</ErrorLink>
         </ErrorText>
       </ErrorTextContainer>
+
     </ErrorPageWrapper>
   );
 }
