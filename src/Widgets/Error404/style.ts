@@ -1,20 +1,31 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import colors from '../../Shared/Constants/colors';
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import colors from "../../Shared/Constants/colors";
+import errorImage from "../../Assets/images/error.png";
 
 export const ErrorPageWrapper = styled.div`
-  width: 670px;
+  width: 1440px;
   min-height: 70vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 auto;
 `;
 
-export const ErrorTextContainer = styled.div`
-  max-width: 365px;
+export const ErrorImg = styled.div`
+  width: 800px;
+  height: 350px;
+  background-image: url("${errorImage}");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
+`;
 
+export const ErrorTextContainer = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
 `;
 
 export const ErrorText = styled.p`

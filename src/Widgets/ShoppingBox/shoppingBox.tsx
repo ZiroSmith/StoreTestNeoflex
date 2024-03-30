@@ -1,3 +1,4 @@
+import React from "react";
 import { page } from "../../Shared/Constants/navigation";
 import Card from "../../Shared/Components/BasketCard/card";
 
@@ -15,13 +16,8 @@ import {
 } from "./styled";
 
 function ShopinngBox() {
-  //почему ошибка?
   const newData = JSON.parse(localStorage.getItem("cart"));
-
-  //почему ошибка?
-  const cardsnew = newData.map((card) => (
-    <Card key={card.id} card={card} />
-  ));
+  const cardsnew = newData.map((card) => <Card key={card.id} card={card} />);
 
   return (
     <Basket>
@@ -36,7 +32,6 @@ function ShopinngBox() {
           <PaymentBtn>Перейти к оформлению</PaymentBtn>
           <ToHomeBtn to={page.mainPage}>Вернуться к каталогу</ToHomeBtn>
         </Payment>
-
       </BasketStoreContainer>
     </Basket>
   );

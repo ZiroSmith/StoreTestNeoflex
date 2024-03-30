@@ -15,8 +15,8 @@ import {
 import CardProps from "./types";
 
 function Card({ card }: CardProps) {
-  //Работает криво, косо, нервно и не так как нужно :)
-  const deleteItem = () => {
+  const deleteCard = () => {
+    // работает, но карточка исчезает только после обновления страницы
     const OldData = JSON.parse(localStorage.getItem("cart"));
     const itemToDelete = OldData.filter((item) => item.id !== card.id);
     localStorage.setItem("cart", JSON.stringify(itemToDelete));
@@ -40,7 +40,7 @@ function Card({ card }: CardProps) {
         </CardPrice>
       </CardInfoContainer>
       <ResultContainer>
-        <DeleteBtn onClick={deleteItem} />
+        <DeleteBtn onClick={deleteCard} />
         <CardPrice>
           {card?.price}
           <span> ₽</span>

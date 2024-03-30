@@ -14,10 +14,10 @@ import {
 import CardProps from "./types";
 
 function Card({ card }: CardProps) {
-  const updateSrorage = () => {
+    const updateSrorage = () => {
     if (localStorage.getItem("cart")) {
       const oldData = JSON.parse(localStorage.getItem('cart')) || [];
-      oldData.push(card); 
+      oldData.push(card);
       localStorage.setItem('cart', JSON.stringify(oldData));
     } else {
       localStorage.setItem("cart", JSON.stringify([card]));

@@ -11,7 +11,6 @@ import {
   Footerlogo,
   FooterInfo,
   FooterNaw,
-  FooterNawLink,
   FooterLang,
   Сonditions,
   FooterLangContainer,
@@ -31,18 +30,14 @@ function Footer() {
       </Link>
       <FooterInfo>
         <FooterNaw>
-          <Link to={page.basketPage}>
-            <FooterNawLink>Избранное</FooterNawLink>
-          </Link>
-          <Link to={page.basketPage}>
-            <FooterNawLink>Корзина</FooterNawLink>
-          </Link>
-          <Link to={page.mainPage}>
-            <FooterNawLink>Контакты</FooterNawLink>
-          </Link>
+          <Link to={page.basketPage}>Избранное</Link>
+          <Link to={page.basketPage}>Корзина</Link>
+          <Link to={page.mainPage}>Контакты</Link>
         </FooterNaw>
         <FooterLang>
-          <Сonditions href="https://vc.ru/flood/612943-42-pravila-idealnogo-klientskogo-servisa-dlya-raznyh-biznes-nish-onlayn-i-oflayn-vzaimodeystviya-s-klientom">Условия сервиса</Сonditions>
+          <Сonditions href="https://vc.ru/flood/612943-42-pravila-idealnogo-klientskogo-servisa-dlya-raznyh-biznes-nish-onlayn-i-oflayn-vzaimodeystviya-s-klientom">
+            Условия сервиса
+          </Сonditions>
           <FooterLangContainer>
             <LangIcon src={IconLang} alt="Icon Lang" />
             <LangBtnYellow>Рус</LangBtnYellow>

@@ -27,6 +27,12 @@ export const FooterWrapper = styled.footer`
 `;
 
 export const Link = styled(NavLink)`
+  ${nawLink}
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    opacity: 0.5;
+  }
   @media (max-width: 600px) {
     margin: 0 auto;
   }
@@ -63,15 +69,6 @@ export const FooterNaw = styled.div`
 
   @media (max-width: 600px) {
     margin: 0 auto;
-  }
-`;
-
-export const FooterNawLink = styled.a`
-  ${nawLink}
-  cursor: pointer;
-  transition: 0.3s all;
-  &:hover {
-    opacity: 0.5;
   }
 `;
 

@@ -15,6 +15,10 @@ import {
 } from "./style";
 
 function Header() {
+
+  const dataProduct = JSON.parse(localStorage.getItem('cart')) || [];
+  const counterProduct = dataProduct.length;
+
   return (
     <HeaderWrapper>
       <HeaderLink to={page.mainPage}>
@@ -23,11 +27,11 @@ function Header() {
       <HeaderContainer>
         <LikeButton to={page.basketPage}>
           <LikeButtonImg />
-          <LikeButtonQuantity>2</LikeButtonQuantity>
+          <LikeButtonQuantity>{counterProduct}</LikeButtonQuantity>
         </LikeButton>
         <BasketButton to={page.basketPage}>
           <BasketButtonImg />
-          <BasketButtonQuantity>1</BasketButtonQuantity>
+          <BasketButtonQuantity>{counterProduct}</BasketButtonQuantity>
         </BasketButton>
       </HeaderContainer>
     </HeaderWrapper>
