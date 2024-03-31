@@ -19,7 +19,7 @@ import CardProps from "./types";
 
 function Card({ card, setNewData }: CardProps) {
   const OldData = JSON.parse(localStorage.getItem("cart"));
-  const [itemCount, setItemCount] = React.useState(
+  const [cardCount, setCardCount] = React.useState(
     OldData.find((item) => item.id === card.id).quantity
   );
 
@@ -29,22 +29,22 @@ function Card({ card, setNewData }: CardProps) {
   const addQuantity = () => {
     const newCartData = JSON.parse(localStorage.getItem("cart"));
     const index = newCartData.findIndex((item) => item.id === card.id);
-    newCartData[index].quantity = itemCount + 1;
+    newCartData[index].quantity = cardCount + 1;
     localStorage.setItem("cart", JSON.stringify(newCartData));
-    setItemCount(itemCount + 1);
+    setCardCount(cardCount + 1);
     setNewData(newCartData);
   };
 
   const putAwayQuantity = () => {
-    if (itemCount < 2) {
+    if (cardCount < 2) {
       onDeleted();
       return;
     }
     const newCartData = JSON.parse(localStorage.getItem("cart"));
     const index = OldData.findIndex((item) => item.id === card.id);
-    newCartData[index].quantity = itemCount - 1;
+    newCartData[index].quantity = cardCount - 1;
     localStorage.setItem("cart", JSON.stringify(newCartData));
-    setItemCount(itemCount - 1);
+    setCardCount(cardCount - 1);
     setNewData(newCartData);
   };
 
@@ -62,7 +62,7 @@ function Card({ card, setNewData }: CardProps) {
         <CardImg src={card?.url} alt={card?.alt} />
         <Quantity>
           <QuantityPutAwayBtn onClick={putAwayQuantity} />
-          <QuantityResult>{itemCount}</QuantityResult>
+          <QuantityResult>{cardCount}</QuantityResult>
           <QuantityAddBtn onClick={addQuantity} />
         </Quantity>
       </QuantityContainer>

@@ -19,7 +19,7 @@ import CardProps from "./types";
 function Card({ card }: CardProps) {
   const arrDataCards = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const [isClicked, setIsClicked] = React.useState(
+  const [click, setClick] = React.useState(
     arrDataCards.some((item) => item.id === card.id)
   );
 
@@ -31,10 +31,10 @@ function Card({ card }: CardProps) {
       const oldData = JSON.parse(localStorage.getItem("cart")) || [];
       oldData.push(card);
       localStorage.setItem("cart", JSON.stringify(oldData));
-      setIsClicked(true);
+      setClick(true);
     } else {
       localStorage.setItem("cart", JSON.stringify([card]));
-      setIsClicked(true);
+      setClick(true);
     }
     increment();
   };
@@ -56,8 +56,8 @@ function Card({ card }: CardProps) {
             <span> ₽</span>
           </CardPrice>
           <CardOldPrice>{card?.oldPrice}</CardOldPrice>
-          <CardBuyBtn onClick={updateSrorage} disabled={isClicked}>
-            {isClicked ? "В корзине" : "Купить"}
+          <CardBuyBtn onClick={updateSrorage} disabled={click}>
+            {click ? "В корзине" : "Купить"}
           </CardBuyBtn>
         </CardBuy>
       </CardInfoContainer>
