@@ -5,7 +5,7 @@ import Footer from '../../Widgets/Footer/footer';
 
 function Layout() {
   return (
-    <MainWrapper>
+    <MainWrapper >
       <Header />
       <Outlet />
       <Footer />

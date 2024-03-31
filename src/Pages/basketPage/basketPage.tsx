@@ -1,4 +1,4 @@
-import ShoppingBox from '../../Widgets/ShoppingBox/shoppingBox';
+import ShoppingBox from "../../Widgets/ShoppingBox/shoppingBox";
 
 function BasketPage() {
   return (

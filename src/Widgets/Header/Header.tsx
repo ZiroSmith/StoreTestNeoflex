@@ -16,12 +16,16 @@ import {
 } from "./style";
 
 function Header() {
-
-  const dataProduct = JSON.parse(localStorage.getItem('cart')) || [];
+  const dataProduct = JSON.parse(localStorage.getItem("cart")) || [];
 
   const [counterProduct, setСounterProduct] = React.useState(
     dataProduct.length
   );
+
+  React.useEffect(() => {
+    setСounterProduct(dataProduct.length);
+    console.log('header__useEffect')
+  }, [counterProduct]);
 
   return (
     <HeaderWrapper>

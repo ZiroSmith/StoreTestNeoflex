@@ -16,7 +16,7 @@ import {
 } from "./styled";
 import CardProps from "./types";
 
-function Card({ card }: CardProps) {
+function Card({ card, setNewData }: CardProps) {
   const OldData = JSON.parse(localStorage.getItem("cart"));
   const [itemCount, setItemCount] = React.useState(
     OldData.find((item) => item.id === card.id).quantity
@@ -28,6 +28,7 @@ function Card({ card }: CardProps) {
     newCartData[index].quantity = itemCount + 1;
     localStorage.setItem("cart", JSON.stringify(newCartData));
     setItemCount(itemCount + 1);
+    setNewData(newCartData);
   };
 
   const putAwayQuantity = () => {
@@ -40,17 +41,14 @@ function Card({ card }: CardProps) {
     newCartData[index].quantity = itemCount - 1;
     localStorage.setItem("cart", JSON.stringify(newCartData));
     setItemCount(itemCount - 1);
+    setNewData(newCartData);
   };
-
-
 
   const onDeleted = () => {
     const OldData = JSON.parse(localStorage.getItem("cart"));
     const newCartData = OldData.filter((item) => item.id !== card.id);
     localStorage.setItem("cart", JSON.stringify(newCartData));
-
-    //Вот тут нужен тригер, который после передам пропсом
-    
+    setNewData(newCartData);
   };
 
   return (

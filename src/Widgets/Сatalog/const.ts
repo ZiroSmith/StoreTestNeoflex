@@ -43,7 +43,7 @@ export const CARDS_INFO = [
     name: "Apple BYZ S8521",
     grade: "4.7",
     price: 2927,
-    oldPrice: "3527",
+    oldPrice: "",
     url: img1,
     alt: "Наушники Apple BYZ S8521",
     quantity: 1,

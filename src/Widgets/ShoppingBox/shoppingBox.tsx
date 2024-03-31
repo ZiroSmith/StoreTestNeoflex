@@ -20,7 +20,6 @@ function ShopinngBox() {
     JSON.parse(localStorage.getItem("cart"))
   );
 
-
   const totalAmount =
     newData.length !== 0
       ? newData
@@ -28,14 +27,15 @@ function ShopinngBox() {
           .reduce((a, b) => a + b)
       : 0;
 
-  const cardsnew = newData.map((card) => <Card key={card.id} card={card} />);
+  const cardsnew = newData.map((card) => (
+    <Card
+      key={card.id}
+      card={card}
+      setNewData={setNewData}
+    />
+  ));
 
-//тут нужна зависимость из пропса которая запустит useEffect
-
-  React.useEffect(() => {
-    setNewData(JSON.parse(localStorage.getItem("cart")));
-    console.log("Порадуешь меня?");
-  }, []);
+  React.useEffect(() => {}, [newData]);
 
   return (
     <Basket>
