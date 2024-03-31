@@ -1,4 +1,5 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 import {
   CardContainer,
@@ -22,6 +23,8 @@ function Card({ card }: CardProps) {
     arrDataCards.some((item) => item.id === card.id)
   );
 
+  const [count, setCount] = useOutletContext();
+  const increment = () => setCount((c) => c + 1);
 
   const updateSrorage = () => {
     if (localStorage.getItem("cart")) {
@@ -33,6 +36,7 @@ function Card({ card }: CardProps) {
       localStorage.setItem("cart", JSON.stringify([card]));
       setIsClicked(true);
     }
+    increment();
   };
 
   return (

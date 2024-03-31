@@ -1,4 +1,5 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 import {
   CardContainer,
@@ -21,6 +22,9 @@ function Card({ card, setNewData }: CardProps) {
   const [itemCount, setItemCount] = React.useState(
     OldData.find((item) => item.id === card.id).quantity
   );
+
+  const [count, setCount] = useOutletContext();
+  const increment = () => setCount((c) => c - 1);
 
   const addQuantity = () => {
     const newCartData = JSON.parse(localStorage.getItem("cart"));
@@ -49,6 +53,7 @@ function Card({ card, setNewData }: CardProps) {
     const newCartData = OldData.filter((item) => item.id !== card.id);
     localStorage.setItem("cart", JSON.stringify(newCartData));
     setNewData(newCartData);
+    increment();
   };
 
   return (

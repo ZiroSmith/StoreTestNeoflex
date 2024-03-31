@@ -15,7 +15,7 @@ import {
   BasketButtonQuantity,
 } from "./style";
 
-function Header() {
+function Header({ item }) {
   const dataProduct = JSON.parse(localStorage.getItem("cart")) || [];
 
   const [counterProduct, setСounterProduct] = React.useState(
@@ -24,8 +24,8 @@ function Header() {
 
   React.useEffect(() => {
     setСounterProduct(dataProduct.length);
-    console.log('header__useEffect')
-  }, [counterProduct]);
+    console.log("header__useEffect");
+  }, [item]);
 
   return (
     <HeaderWrapper>
