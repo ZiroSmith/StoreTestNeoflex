@@ -1,3 +1,4 @@
+import React from "react";
 import { page } from "../../Shared/Constants/navigation";
 import HeaderLogo from "../../Assets/images/logo.png";
 
@@ -17,7 +18,10 @@ import {
 function Header() {
 
   const dataProduct = JSON.parse(localStorage.getItem('cart')) || [];
-  const counterProduct = dataProduct.length;
+
+  const [counterProduct, setСounterProduct] = React.useState(
+    dataProduct.length
+  );
 
   return (
     <HeaderWrapper>

@@ -1,6 +1,6 @@
 import React from "react";
 import { page } from "../../Shared/Constants/navigation";
-import Card from "../../Shared/Components/BasketCard/card";
+import Card from "../../Shared/Components/BasketCard/basketCard";
 
 import {
   Basket,
@@ -16,19 +16,26 @@ import {
 } from "./styled";
 
 function ShopinngBox() {
-  //const newData = JSON.parse(localStorage.getItem("cart"));
-  //const cardsnew = newData.map((card) => <Card key={card.id} card={card} />);
-
   const [newData, setNewData] = React.useState(
     JSON.parse(localStorage.getItem("cart"))
   );
 
-  const handleCartData = () => {
-    setNewData(JSON.parse(localStorage.getItem("cart")));
-    console.log('handleCartData!!!!!!!!!!!!!!');
-  }
 
-  const cardsnew = newData.map((card) => <Card key={card.id} card={card} myFunction={() => handleCartData}/>);
+  const totalAmount =
+    newData.length !== 0
+      ? newData
+          .map((item) => item.price * item.quantity)
+          .reduce((a, b) => a + b)
+      : 0;
+
+  const cardsnew = newData.map((card) => <Card key={card.id} card={card} />);
+
+//тут нужна зависимость из пропса которая запустит useEffect
+
+  React.useEffect(() => {
+    setNewData(JSON.parse(localStorage.getItem("cart")));
+    console.log("Порадуешь меня?");
+  }, []);
 
   return (
     <Basket>
@@ -38,7 +45,7 @@ function ShopinngBox() {
         <Payment>
           <PaymentPrice>
             <PaymentPriceText>ИТОГО</PaymentPriceText>
-            <PaymentPriceSum>₽ 2 927</PaymentPriceSum>
+            <PaymentPriceSum>₽ {totalAmount}</PaymentPriceSum>
           </PaymentPrice>
           <PaymentBtn>Перейти к оформлению</PaymentBtn>
           <ToHomeBtn to={page.mainPage}>Вернуться к каталогу</ToHomeBtn>
