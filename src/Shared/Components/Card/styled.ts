@@ -15,7 +15,7 @@ export const CardContainer = styled.article<CardProps>`
   background-color: white;
   border-radius: 30px;
   box-shadow: -4px -4px 14px 2px rgba(0, 0, 0, 0.1),
-  4px 4px 14px 2px rgba(0, 0, 0, 0.1);
+    4px 4px 14px 2px rgba(0, 0, 0, 0.1);
 `;
 
 export const CardImg = styled.img`
@@ -59,6 +59,7 @@ export const CardGradeIcon = styled.div`
 
 export const CardPrice = styled.div`
   ${priceCard}
+  text-align: right;
 `;
 
 export const CardOldPrice = styled.div`
@@ -69,11 +70,16 @@ export const CardOldPrice = styled.div`
   text-decoration: line-through;
 `;
 
-export const CardBuyBtn = styled.a`
+export const CardBuyBtn = styled.button`
   ${titleCard}
   cursor: pointer;
   transition: 0.3s all;
   &:hover {
     opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 1;
+    cursor: default;
   }
 `;

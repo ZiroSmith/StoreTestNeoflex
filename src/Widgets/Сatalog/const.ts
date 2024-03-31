@@ -16,6 +16,7 @@ export const CARDS_INFO = [
     oldPrice: "3527 ₽",
     url: img1,
     alt: "Наушники Apple BYZ S8521",
+    quantity: 1,
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ export const CARDS_INFO = [
     oldPrice: "",
     url: img2,
     alt: "Наушники Apple EarPods",
+    quantity: 1,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const CARDS_INFO = [
     oldPrice: "",
     url: img3,
     alt: "Наушники Apple EarPods",
+    quantity: 1,
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ export const CARDS_INFO = [
     oldPrice: "3527",
     url: img1,
     alt: "Наушники Apple BYZ S8521",
+    quantity: 1,
   },
   {
     id: 5,
@@ -52,6 +56,7 @@ export const CARDS_INFO = [
     oldPrice: "",
     url: img2,
     alt: "Наушники Apple EarPods",
+    quantity: 1,
   },
   {
     id: 6,
@@ -61,6 +66,7 @@ export const CARDS_INFO = [
     oldPrice: "",
     url: img3,
     alt: "Наушники Apple EarPods",
+    quantity: 1,
   },
 ];
 
@@ -73,6 +79,7 @@ export const CARDS_WIRELESS_INFO = [
     oldPrice: "",
     url: imgWireless1,
     alt: "Беспроводные наушники Apple EarPods",
+    quantity: 1,
   },
   {
     id: 8,
@@ -82,6 +89,7 @@ export const CARDS_WIRELESS_INFO = [
     oldPrice: "",
     url: imgWireless2,
     alt: "Беспроводные наушники GERLAX GH-04",
+    quantity: 1,
   },
   {
     id: 9,
@@ -91,5 +99,6 @@ export const CARDS_WIRELESS_INFO = [
     oldPrice: "",
     url: imgWireless3,
     alt: "Беспроводные наушники BOROFONE BO4",
+    quantity: 1,
   },
 ];

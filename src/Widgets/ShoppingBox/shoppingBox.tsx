@@ -16,8 +16,19 @@ import {
 } from "./styled";
 
 function ShopinngBox() {
-  const newData = JSON.parse(localStorage.getItem("cart"));
-  const cardsnew = newData.map((card) => <Card key={card.id} card={card} />);
+  //const newData = JSON.parse(localStorage.getItem("cart"));
+  //const cardsnew = newData.map((card) => <Card key={card.id} card={card} />);
+
+  const [newData, setNewData] = React.useState(
+    JSON.parse(localStorage.getItem("cart"))
+  );
+
+  const handleCartData = () => {
+    setNewData(JSON.parse(localStorage.getItem("cart")));
+    console.log('handleCartData!!!!!!!!!!!!!!');
+  }
+
+  const cardsnew = newData.map((card) => <Card key={card.id} card={card} myFunction={() => handleCartData}/>);
 
   return (
     <Basket>

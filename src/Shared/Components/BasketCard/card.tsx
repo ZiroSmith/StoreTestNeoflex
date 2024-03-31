@@ -14,16 +14,26 @@ import {
 } from "./styled";
 import CardProps from "./types";
 
-function Card({ card }: CardProps) {
-  const deleteCard = () => {
-    // работает, но карточка исчезает только после обновления страницы
+function Card({ card, myFunction }: CardProps) {
+  // const deleteCard = () => {
+  //   // работает, но карточка исчезает только после обновления страницы
+  //   const OldData = JSON.parse(localStorage.getItem("cart"));
+  //   const itemToDelete = OldData.filter((item) => item.id !== card.id);
+  //   localStorage.setItem("cart", JSON.stringify(itemToDelete));
+  // };
+  const delSetDel = () => {
     const OldData = JSON.parse(localStorage.getItem("cart"));
     const itemToDelete = OldData.filter((item) => item.id !== card.id);
     localStorage.setItem("cart", JSON.stringify(itemToDelete));
+
+
+    //не рабочий триггер, чтобы запустить "handleCartData"
+    myFunction();
+    console.log(myFunction());
   };
 
   return (
-    <CardContainer>
+    <CardContainer myFunction={()=> myFunction}>
       <QuantityContainer>
         <CardImg src={card?.url} alt={card?.alt} />
         <Quantity>
@@ -40,7 +50,7 @@ function Card({ card }: CardProps) {
         </CardPrice>
       </CardInfoContainer>
       <ResultContainer>
-        <DeleteBtn onClick={deleteCard} />
+        <DeleteBtn onClick={delSetDel} {...{ myFunction }}/>
         <CardPrice>
           {card?.price}
           <span> ₽</span>

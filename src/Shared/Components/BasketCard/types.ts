@@ -1,6 +1,7 @@
 interface CardProps {
   card?: Card;
   color?: string;
+  myFunction?: ()=> void;
 }
 
 type Card = {
